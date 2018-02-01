@@ -9,19 +9,29 @@
 /* Begin PBXBuildFile section */
 		953A1D352023811000BE07AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D342023811000BE07AC /* AppDelegate.swift */; };
 		953A1D372023811000BE07AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D362023811000BE07AC /* ViewController.swift */; };
-		953A1D3A2023811000BE07AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953A1D382023811000BE07AC /* Main.storyboard */; };
 		953A1D3C2023811000BE07AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 953A1D3B2023811000BE07AC /* Assets.xcassets */; };
 		953A1D3F2023811000BE07AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 953A1D3D2023811000BE07AC /* LaunchScreen.storyboard */; };
+		953A1D4D20238DD200BE07AC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4A20238DD200BE07AC /* UIColorExtension.swift */; };
+		953A1D4E20238DD200BE07AC /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4B20238DD200BE07AC /* CGFloatExtension.swift */; };
+		953A1D4F20238DD200BE07AC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4C20238DD200BE07AC /* UIViewExtension.swift */; };
+		953A1D5220238DE800BE07AC /* MyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5020238DE800BE07AC /* MyAlertView.swift */; };
+		953A1D5320238DE800BE07AC /* QSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5120238DE800BE07AC /* QSButton.swift */; };
+		953A1D5520239A8800BE07AC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5420239A8800BE07AC /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		953A1D312023811000BE07AC /* CustomAlertView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlertView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		953A1D342023811000BE07AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		953A1D362023811000BE07AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		953A1D392023811000BE07AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		953A1D3B2023811000BE07AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		953A1D3E2023811000BE07AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		953A1D402023811000BE07AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		953A1D4A20238DD200BE07AC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		953A1D4B20238DD200BE07AC /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		953A1D4C20238DD200BE07AC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		953A1D5020238DE800BE07AC /* MyAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertView.swift; sourceTree = "<group>"; };
+		953A1D5120238DE800BE07AC /* QSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSButton.swift; sourceTree = "<group>"; };
+		953A1D5420239A8800BE07AC /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,51 @@
 		953A1D332023811000BE07AC /* CustomAlertView */ = {
 			isa = PBXGroup;
 			children = (
-				953A1D342023811000BE07AC /* AppDelegate.swift */,
-				953A1D362023811000BE07AC /* ViewController.swift */,
-				953A1D382023811000BE07AC /* Main.storyboard */,
-				953A1D3B2023811000BE07AC /* Assets.xcassets */,
-				953A1D3D2023811000BE07AC /* LaunchScreen.storyboard */,
 				953A1D402023811000BE07AC /* Info.plist */,
+				953A1D342023811000BE07AC /* AppDelegate.swift */,
+				953A1D492023819400BE07AC /* Extensions */,
+				953A1D482023818500BE07AC /* Views */,
+				953A1D472023817500BE07AC /* ViewControllers */,
+				953A1D462023815B00BE07AC /* SupportingFiles */,
 			);
 			path = CustomAlertView;
+			sourceTree = "<group>";
+		};
+		953A1D462023815B00BE07AC /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				953A1D3D2023811000BE07AC /* LaunchScreen.storyboard */,
+				953A1D3B2023811000BE07AC /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		953A1D472023817500BE07AC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				953A1D362023811000BE07AC /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		953A1D482023818500BE07AC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				953A1D5020238DE800BE07AC /* MyAlertView.swift */,
+				953A1D5120238DE800BE07AC /* QSButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		953A1D492023819400BE07AC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				953A1D4B20238DD200BE07AC /* CGFloatExtension.swift */,
+				953A1D4A20238DD200BE07AC /* UIColorExtension.swift */,
+				953A1D4C20238DD200BE07AC /* UIViewExtension.swift */,
+				953A1D5420239A8800BE07AC /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +172,6 @@
 			files = (
 				953A1D3F2023811000BE07AC /* LaunchScreen.storyboard in Resources */,
 				953A1D3C2023811000BE07AC /* Assets.xcassets in Resources */,
-				953A1D3A2023811000BE07AC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,22 +182,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				953A1D4F20238DD200BE07AC /* UIViewExtension.swift in Sources */,
+				953A1D5520239A8800BE07AC /* UIButtonExtension.swift in Sources */,
 				953A1D372023811000BE07AC /* ViewController.swift in Sources */,
 				953A1D352023811000BE07AC /* AppDelegate.swift in Sources */,
+				953A1D5220238DE800BE07AC /* MyAlertView.swift in Sources */,
+				953A1D5320238DE800BE07AC /* QSButton.swift in Sources */,
+				953A1D4E20238DD200BE07AC /* CGFloatExtension.swift in Sources */,
+				953A1D4D20238DD200BE07AC /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		953A1D382023811000BE07AC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				953A1D392023811000BE07AC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		953A1D3D2023811000BE07AC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -275,7 +319,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VCVDCSHVD;
 				INFOPLIST_FILE = CustomAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.CustomAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,7 +335,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9VCVDCSHVD;
 				INFOPLIST_FILE = CustomAlertView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mmg.CustomAlertView;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -9,7 +9,7 @@
 import UIKit
 
 class QSButton: UIButton {
-    class func getButton(title: String) -> UIButton {
+    private class func createButton(title: String) -> UIButton {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 8
@@ -18,17 +18,43 @@ class QSButton: UIButton {
         button.setTitle(title, for: .normal)
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.setTitleColor(.lightGray, for: .normal)
-        button.widthAnchor.constraint(equalToConstant: 88).isActive = true
-        button.heightAnchor.constraint(equalToConstant: 36).isActive = true
+
         
         return button
     }
     
-    class func getColorButton(title: String) -> UIButton {
-        let button = getButton(title: title)
+    private class func createColorButton(title: String, resizable: Bool) -> UIButton {
+        let button = resizable ? createButton(title: title) : getButton(title: title)
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.backgroundColor = UIColor.red.cgColor
         button.layer.borderColor = UIColor.clear.cgColor
+
+        return button
+    }
+    
+    class func getButton(title: String) -> UIButton {
+        let button = createButton(title: title)
+        button.widthAnchor.constraint(equalToConstant: 88).isActive = true
+        button.heightAnchor.constraint(equalToConstant: 36).isActive = true
+        
+        return button
+        
+    }
+    
+    class func getResizableButton(title: String) -> UIButton {
+        let button = createButton(title: title)
+        button.addSidePadding()
+
+        return button
+    }
+    
+    class func getColorButton(title: String) -> UIButton {
+        return createColorButton(title: title, resizable: false)
+    }
+    
+    class func getResizableColorButton(title: String) -> UIButton {
+        let button = createColorButton(title: title, resizable: true)
+        button.addSidePadding()
 
         return button
     }

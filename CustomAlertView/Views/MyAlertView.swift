@@ -158,8 +158,8 @@ class MyAlertView: UIViewController {
         mainStackView.widthAnchor.constraint(lessThanOrEqualToConstant: 272).isActive = true
         
         if imageView.image != nil {
-            imageView.widthAnchor.constraint(equalToConstant: 72).isActive = true
-            imageView.heightAnchor.constraint(equalToConstant: 72).isActive = true
+            imageView.widthAnchor.constraint(equalToConstant: 48).isActive = true
+            imageView.heightAnchor.constraint(equalToConstant: 48).isActive = true
         }
         
         backgroungView.leftAnchor.constraint(equalTo: mainStackView.leftAnchor, constant: -contentOffsetFromView).isActive = true
@@ -168,7 +168,7 @@ class MyAlertView: UIViewController {
         backgroungView.bottomAnchor.constraint(equalTo: mainStackView.bottomAnchor, constant: contentOffsetFromView).isActive = true
     }
     
-    func dissmissViewController(){
+    @objc func dissmissViewController(){
         self.dismiss(animated: true, completion: nil)
     }
 }
