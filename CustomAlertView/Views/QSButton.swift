@@ -11,6 +11,7 @@ import UIKit
 class QSButton: UIButton {
     private class func createButton(title: String) -> UIButton {
         let button = UIButton()
+        button.titleLabel?.lineBreakMode = .byTruncatingTail
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.cornerRadius = 8
         button.layer.borderWidth = 1
@@ -59,7 +60,7 @@ class QSButton: UIButton {
         return button
     }
     
-    class func getBottomScreenwideButton(title: String, view: UIView) -> UIButton {
+    class func getBottomScreenwideButton(title: String, inParentView view: UIView) -> UIButton {
         let buttonHeight: CGFloat = 50
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false

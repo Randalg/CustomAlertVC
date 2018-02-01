@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     }
     
     func initBottomWideButton(withTitle title: String){
-        wideButton = QSButton.getBottomScreenwideButton(title: title, view: self.view)
+        wideButton = QSButton.getBottomScreenwideButton(title: title, inParentView: self.view)
         wideButton?.addTarget(self, action: #selector(rockIt), for: .touchUpInside)
     }
     
