@@ -100,6 +100,9 @@ class MyAlertView: UIViewController {
         }
         
         super.init(nibName: nil, bundle: nil)
+        
+        self.modalPresentationStyle = .overCurrentContext
+        self.modalTransitionStyle = .crossDissolve
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -64,9 +64,6 @@ class ViewController: UIViewController {
         
         let alert = MyAlertView(title: "Are you sure you want to delete this item?", body: "Selected item will no longer appear in your list?", buttons: [cancelButton, deleteButton], image: nil)
         
-        alert.modalPresentationStyle = .overCurrentContext
-        alert.modalTransitionStyle = .crossDissolve
-        
         self.present(alert, animated: true, completion: nil)
     }
     
@@ -82,9 +79,6 @@ class ViewController: UIViewController {
         closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
         
         let alert = MyAlertView(title: "This item is not sharable.", body: nil, buttons: [closeButton], image: #imageLiteral(resourceName: "ic_lock_48pt"))
-        
-        alert.modalPresentationStyle = .overCurrentContext
-        alert.modalTransitionStyle = .crossDissolve
         
         self.present(alert, animated: true, completion: nil)
     }
