@@ -45,40 +45,40 @@ class ViewController: UIViewController {
     }
     
     func initBottomWideButton(withTitle title: String){
-        wideButton = QSButton.getBottomScreenwideButton(title: title, inParentView: self.view)
+        wideButton = MGButton.getBottomScreenwideButton(title: title, inParentView: self.view)
         wideButton?.addTarget(self, action: #selector(rockIt), for: .touchUpInside)
     }
     
     func getDeleteAlertButton() -> UIButton{
-        let button = QSButton.getResizableColorButton(title: "Show Delete Dialog")
+        let button = MGButton.getResizableColorButton(title: "Show Delete Dialog")
         button.addTarget(self, action: #selector(showDeleteAlert), for: .touchUpInside)
         
         return button
     }
 
     @objc func showDeleteAlert(){
-        let deleteButton = QSButton.getColorButton(title: "Delete")
+        let deleteButton = MGButton.getColorButton(title: "Delete")
         deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-        let cancelButton = QSButton.getFixedWidthButton(title: "Cancel")
+        let cancelButton = MGButton.getFixedWidthButton(title: "Cancel")
         cancelButton.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
         
-        let alert = MyAlertView(title: "Are you sure you want to delete this item?", body: "Selected item will no longer appear in your list?", buttons: [cancelButton, deleteButton], image: nil)
+        let alert = MGAlertView(title: "Are you sure you want to delete this item?", body: "Selected item will no longer appear in your list?", buttons: [cancelButton, deleteButton], image: nil)
         
         self.present(alert, animated: true, completion: nil)
     }
     
     func getNotSharableAlertButton() -> UIButton{
-        let button = QSButton.getResizableColorButton(title: "Show Not Sharable Dialog")
+        let button = MGButton.getResizableColorButton(title: "Show Not Sharable Dialog")
         button.addTarget(self, action: #selector(showNotSharableAlert), for: .touchUpInside)
         
         return button
     }
     
     @objc func showNotSharableAlert(){
-        let closeButton = QSButton.getColorButton(title: "Close")
+        let closeButton = MGButton.getColorButton(title: "Close")
         closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
         
-        let alert = MyAlertView(title: "This item is not sharable.", body: nil, buttons: [closeButton], image: #imageLiteral(resourceName: "ic_lock_48pt"))
+        let alert = MGAlertView(title: "This item is not sharable.", body: nil, buttons: [closeButton], image: #imageLiteral(resourceName: "ic_lock_48pt"))
         
         self.present(alert, animated: true, completion: nil)
     }

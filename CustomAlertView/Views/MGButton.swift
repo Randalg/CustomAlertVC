@@ -3,12 +3,12 @@
 //  CustomAlertView
 //
 //  Created by MMG on 2018-01-31.
-//  Copyright © 2018 dluque. All rights reserved.
+//  Copyright © 2018 MMG. All rights reserved.
 //
 
 import UIKit
 
-class QSButton: UIButton {
+class MGButton: UIButton {
     private class func createButton(title: String) -> UIButton {
         let button = UIButton()
         button.titleLabel?.lineBreakMode = .byTruncatingTail

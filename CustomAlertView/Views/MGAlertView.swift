@@ -1,14 +1,14 @@
 //
-//  MyAlertView.swift
+//  MGAlertView.swift
 //  CustomAlertView
 //
 //  Created by MMG on 2018-01-30.
-//  Copyright © 2018 dluque. All rights reserved.
+//  Copyright © 2018 MMG. All rights reserved.
 //
 
 import UIKit
 
-class MyAlertView: UIViewController {
+class MGAlertView: UIViewController {
     
     var backgroungView: UIView = {
         let menuView = UIView()

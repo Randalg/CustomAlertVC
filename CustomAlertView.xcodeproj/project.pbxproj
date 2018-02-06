@@ -14,8 +14,8 @@
 		953A1D4D20238DD200BE07AC /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4A20238DD200BE07AC /* UIColorExtension.swift */; };
 		953A1D4E20238DD200BE07AC /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4B20238DD200BE07AC /* CGFloatExtension.swift */; };
 		953A1D4F20238DD200BE07AC /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D4C20238DD200BE07AC /* UIViewExtension.swift */; };
-		953A1D5220238DE800BE07AC /* MyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5020238DE800BE07AC /* MyAlertView.swift */; };
-		953A1D5320238DE800BE07AC /* QSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5120238DE800BE07AC /* QSButton.swift */; };
+		953A1D5220238DE800BE07AC /* MGAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5020238DE800BE07AC /* MGAlertView.swift */; };
+		953A1D5320238DE800BE07AC /* MGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5120238DE800BE07AC /* MGButton.swift */; };
 		953A1D5520239A8800BE07AC /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A1D5420239A8800BE07AC /* UIButtonExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,8 +29,8 @@
 		953A1D4A20238DD200BE07AC /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		953A1D4B20238DD200BE07AC /* CGFloatExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
 		953A1D4C20238DD200BE07AC /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
-		953A1D5020238DE800BE07AC /* MyAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAlertView.swift; sourceTree = "<group>"; };
-		953A1D5120238DE800BE07AC /* QSButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QSButton.swift; sourceTree = "<group>"; };
+		953A1D5020238DE800BE07AC /* MGAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGAlertView.swift; sourceTree = "<group>"; };
+		953A1D5120238DE800BE07AC /* MGButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MGButton.swift; sourceTree = "<group>"; };
 		953A1D5420239A8800BE07AC /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,8 +94,8 @@
 		953A1D482023818500BE07AC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				953A1D5020238DE800BE07AC /* MyAlertView.swift */,
-				953A1D5120238DE800BE07AC /* QSButton.swift */,
+				953A1D5020238DE800BE07AC /* MGAlertView.swift */,
+				953A1D5120238DE800BE07AC /* MGButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 				953A1D5520239A8800BE07AC /* UIButtonExtension.swift in Sources */,
 				953A1D372023811000BE07AC /* ViewController.swift in Sources */,
 				953A1D352023811000BE07AC /* AppDelegate.swift in Sources */,
-				953A1D5220238DE800BE07AC /* MyAlertView.swift in Sources */,
-				953A1D5320238DE800BE07AC /* QSButton.swift in Sources */,
+				953A1D5220238DE800BE07AC /* MGAlertView.swift in Sources */,
+				953A1D5320238DE800BE07AC /* MGButton.swift in Sources */,
 				953A1D4E20238DD200BE07AC /* CGFloatExtension.swift in Sources */,
 				953A1D4D20238DD200BE07AC /* UIColorExtension.swift in Sources */,
 			);
