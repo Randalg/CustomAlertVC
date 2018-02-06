@@ -24,8 +24,8 @@ class QSButton: UIButton {
         return button
     }
     
-    private class func createColorButton(title: String, resizable: Bool) -> UIButton {
-        let button = resizable ? createButton(title: title) : getButton(title: title)
+    private class func createColorButton(title: String, resizable: Bool, width: CGFloat = 88) -> UIButton {
+        let button = resizable ? createButton(title: title) : getFixedWidthButton(title: title, width: width)
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.backgroundColor = UIColor.red.cgColor
         button.layer.borderColor = UIColor.clear.cgColor
@@ -33,33 +33,33 @@ class QSButton: UIButton {
         return button
     }
     
-    class func getButton(title: String) -> UIButton {
+    class func getResizableButton(title: String) -> UIButton {
         let button = createButton(title: title)
-        button.widthAnchor.constraint(equalToConstant: 88).isActive = true
+        button.addSidePadding()
+        
+        return button
+    }
+    
+    class func getFixedWidthButton(title: String, width: CGFloat = 88) -> UIButton {
+        let button = createButton(title: title)
+        button.widthAnchor.constraint(equalToConstant: width).isActive = true
         button.heightAnchor.constraint(equalToConstant: 36).isActive = true
         
         return button
         
     }
-    
-    class func getResizableButton(title: String) -> UIButton {
-        let button = createButton(title: title)
-        button.addSidePadding()
 
-        return button
-    }
-    
-    class func getColorButton(title: String) -> UIButton {
-        return createColorButton(title: title, resizable: false)
-    }
-    
     class func getResizableColorButton(title: String) -> UIButton {
         let button = createColorButton(title: title, resizable: true)
         button.addSidePadding()
-
+        
         return button
     }
     
+    class func getColorButton(title: String, width: CGFloat = 88) -> UIButton {
+        return createColorButton(title: title, resizable: false, width: width)
+    }
+ 
     class func getBottomScreenwideButton(title: String, inParentView view: UIView) -> UIButton {
         let buttonHeight: CGFloat = 50
         let button = UIButton()

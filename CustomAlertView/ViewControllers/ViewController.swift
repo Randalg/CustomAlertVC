@@ -59,7 +59,7 @@ class ViewController: UIViewController {
     @objc func showDeleteAlert(){
         let deleteButton = QSButton.getColorButton(title: "Delete")
         deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-        let cancelButton = QSButton.getButton(title: "Cancel")
+        let cancelButton = QSButton.getFixedWidthButton(title: "Cancel")
         cancelButton.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
         
         let alert = MyAlertView(title: "Are you sure you want to delete this item?", body: "Selected item will no longer appear in your list?", buttons: [cancelButton, deleteButton], image: nil)
@@ -102,7 +102,6 @@ class ViewController: UIViewController {
     
     @objc private func rockIt(){
         wideButton?.backgroundColor = UIColor.random()
-        print("The Red Moon ROCKS!!!")
     }
 }
 
