@@ -113,7 +113,7 @@ class MGAlertView: UIViewController {
         super.viewDidLoad()
 
         view.addSubview(backgroungView)
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         setUpViews()
     }
     

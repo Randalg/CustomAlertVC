@@ -31,7 +31,7 @@ class ViewController: UIViewController {
     }
     
     func setupView() {
-        initBottomWideButton(withTitle: "Cool")
+        initBottomWideButton(withTitle: "Change Color")
         stackView.addArrangedSubview(getDeleteAlertButton())
         stackView.addArrangedSubview(getNotSharableAlertButton())
 
@@ -45,39 +45,33 @@ class ViewController: UIViewController {
     }
     
     func initBottomWideButton(withTitle title: String){
-        wideButton = MGButton.getBottomScreenwideButton(title: title, inParentView: self.view)
-        wideButton?.addTarget(self, action: #selector(rockIt), for: .touchUpInside)
+        wideButton = MGButtonFactory.getBottomScreenwideButton(title: title, inParentView: self.view, onTap: rockIt)
     }
     
     func getDeleteAlertButton() -> UIButton{
-        let button = MGButton.getResizableColorButton(title: "Show Delete Dialog")
-        button.addTarget(self, action: #selector(showDeleteAlert), for: .touchUpInside)
+        let button = MGButtonFactory.getResizableColorButton(title: "Delete", onTap: showDeleteAlert)
         
         return button
     }
 
     @objc func showDeleteAlert(){
-        let deleteButton = MGButton.getColorButton(title: "Delete")
-        deleteButton.addTarget(self, action: #selector(deleteTapped), for: .touchUpInside)
-        let cancelButton = MGButton.getFixedWidthButton(title: "Cancel")
-        cancelButton.addTarget(self, action: #selector(cancelTapped), for: .touchUpInside)
-        
-        let alert = MGAlertView(title: "Are you sure you want to delete this item?", body: "Selected item will no longer appear in your list?", buttons: [cancelButton, deleteButton], image: nil)
+        let cancelButton = MGButtonFactory.getButton(title: "Cancel", onTap: nil)
+        let deleteButton = MGButtonFactory.getColorButton(title: "Delete", onTap: {
+            print("VC - Delete Button Pressed!!!")
+        })
+        let alert = MGAlertView(title: "Are you sure you want to delete this item?", body: nil, buttons: [cancelButton, deleteButton], image: nil)
         
         self.present(alert, animated: true, completion: nil)
     }
     
     func getNotSharableAlertButton() -> UIButton{
-        let button = MGButton.getResizableColorButton(title: "Show Not Sharable Dialog")
-        button.addTarget(self, action: #selector(showNotSharableAlert), for: .touchUpInside)
+        let button = MGButtonFactory.getResizableColorButton(title: "Not Sharable", onTap: showNotSharableAlert)
         
         return button
     }
     
     @objc func showNotSharableAlert(){
-        let closeButton = MGButton.getColorButton(title: "Close")
-        closeButton.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-        
+        let closeButton = MGButtonFactory.getColorButton(title: "Close", onTap: closeTapped)
         let alert = MGAlertView(title: "This item is not sharable.", body: nil, buttons: [closeButton], image: #imageLiteral(resourceName: "ic_lock_48pt"))
         
         self.present(alert, animated: true, completion: nil)
@@ -102,6 +96,6 @@ class ViewController: UIViewController {
     
     @objc private func rockIt(){
         wideButton?.backgroundColor = UIColor.random()
+        wideButton?.setTitleColor(UIColor.random(), for: .normal)
     }
 }
-
